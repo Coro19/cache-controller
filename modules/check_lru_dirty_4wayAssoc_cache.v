@@ -26,7 +26,7 @@ mux #(.input_size(1),.sel_size(index_size)) mux
 (
 	.sel(index),
 	.in(dirty_set),
-	.out(hit)
+	.out(dirty)
 );
 
 endmodule

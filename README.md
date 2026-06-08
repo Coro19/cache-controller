@@ -15,24 +15,6 @@ A synthesizable Verilog implementation of a 4-way set-associative cache controll
 | Miss policy   | Write-allocate         |
 | Replacement   | LRU (2-bit age fields) |
 
-## Repository Structure
-
-
-cache-controller-main/
-├── modules/
-│   ├── cache_ctrl.v                      # Top-level module
-│   ├── cache_ctrl_CU.v                   # FSM control unit (11 states, 15 control signals)
-│   ├── cache_hit.v                       # Cache-wide hit detection
-│   ├── set_hit.v                         # Per-set tag comparison
-│   ├── check_lru_dirty_4wayAssoc_cache.v # Cache-wide LRU victim dirty check
-│   ├── check_lru_dirty_4wayAssoc_set.v   # Per-set LRU victim dirty check
-│   ├── d_ff.v                            # D flip-flop cell (set/reset/load)
-│   ├── mux.v                             # Parameterized N-to-1 multiplexer
-│   └── mux_1sel.v                        # Single-select MUX primitive
-└── test_benches/
-    ├── cache_ctrl_tb.v                   # Full FSM testbench
-    └── mux_tb.v                          # MUX unit test
-
 
 ## Module Overview
 

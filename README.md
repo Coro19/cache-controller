@@ -153,3 +153,7 @@ vvp cache_ctrl_tb
 - state[0] (IDLE) uses an active-low *set* (set_b = rst_b) so the FSM powers up in IDLE on reset; all other state bits use an active-low *reset*.
 - The mux module builds an O(log N) selection tree rather than a priority encoder, which maps cleanly to LUT-based FPGA fabric.
 - Tag/valid/dirty/age arrays are passed in as flat buses; the external datapath is responsible for storage and update on the control signals asserted by c.
+
+## FSM Diagram
+
+![Cache Controller FSM](cache_controller_fsm.svg)
